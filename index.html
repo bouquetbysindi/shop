@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouquet Bysindi</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="bouquet.css">
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <a href="index.html" style="text-decoration: none;">
+            <div class="logo">
+                <i class="fa-solid fa-heart"></i> Bouquet Bysindi
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            
+            <li class="dropdown">
+                <a href="Products.html" class="dropbtn">All Products <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="katalog/hemat.html">1. Hemat (10k - 30k)</a>
+                    <a href="katalog/Medium.html">2. Medium (30k - 60k)</a>
+                    <a href="katalog/Premium.html">3. Premium (> 65k)</a>
+                    <a href="katalog/Valentine.html">4. Special Valentine</a>
+                    <a href="katalog/Boneka.html">5. Buket Boneka</a>
+                    <a href="katalog/snack.html">6. Buket Snack</a>
+                    <a href="katalog/Satin.html">7. Buket Satin</a>
+                    <a href="katalog/Akrilik.html">8. Sewa Papan Akrilik</a>
+                    <a href="katalog/Artificial.html">9. Artificial & Dried Flower</a>
+                </div>
+            </li>
+            <li><a href="#order">How to order</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#testi">Testimoni</a></li>
+        </ul>
+            
+        <div class="nav-buttons" id="guest-nav">
+                <a href="login.html" class="signin-btn">Log In</a>
+                <a href="signin.html" class="join-btn">Sign Up</a>
+            </div>
+
+            <div class="user-profile" id="user-nav" style="display: none; align-items: center; gap: 15px;">
+                <div style="text-align: right;">
+                    <span style="font-size: 14px; color: #333;">Hi, <b id="userNameDisplay" style="color: #D61C4E;">User</b></span>
+                </div>
+                <img src="" alt="Profile" id="userAvatar" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #D61C4E;">
+                <button onclick="logout()" style="background:none; border:none; cursor:pointer; color:#666;"><i class="fa-solid fa-right-from-bracket"></i></button>
+            </div>
+    </nav>
+
+    <!-- Menu Home -->
+    <header class="hero">
+        <div class="hero-text">
+            <span class="subtitle">FIND YOUR BOUQUET</span>
+            <h1>Bouquet Bysindi</h1>
+            <p>Kami merangkai buket impianmu dengan pilihan terbaik, melayani setiap detail dengan penuh perhatian, dan memastikan momen spesialmu berjalan sempurna</p>
+            <a href="Products.html" class="join-btn" style="padding: 15px 40px;">Buy Your Bouquet</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+        <div class="container">
+            
+            <div class="about-images">
+                <img src="Gambar/cover1.jpeg" alt="Bouquet Mawar" class="img-main">
+                <img src="Gambar/cover2.jpeg" alt="Florist merangkai bunga" class="img-small">
+            </div>
+
+            <div class="about-content">
+                <span class="sub-title">SINCE 2022</span>
+                <h2>Crafting Feelings into <br> <span class="highlight">Beautiful Bouquets</span></h2>
+                
+                <p class="description">
+                    Selamat datang di <strong>Bouquet Bysindi</strong>. tempat di mana setiap bunga dipilih dengan sepenuh hati dan dirangkai untuk menyampaikan cerita. Kami percaya bahwa setiap tangkai bunga memiliki makna tentang cinta, kebahagiaan, harapan, dan perhatian.
+                </p>
+                
+                <p class="description">
+                    Dengan sentuhan kreativitas dan keahlian tangan profesional, kami menghadirkan rangkaian bunga segar yang elegan dan berkelas, sempurna untuk setiap momen spesial Anda. Dari hadiah sederhana hingga perayaan istimewa, kami siap membantu Anda menyampaikan perasaan melalui keindahan bunga.
+                </p>
+
+                <div class="features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-seedling"></i>
+                        <div>
+                            <h4>Fresh Flowers</h4>
+                            <p>Selalu segar saat sampai di tangan Anda</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <div>
+                            <h4>Custom Wrapping</h4>
+                            <p>Pilih warna & gaya sesukamu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To Order -->
+    <section class="order-section" id="order">
+        <div class="container-order">
+            
+            <div class="section-header">
+                <span class="sub-title">EASY STEPS</span>
+                <h2>How to Order Your <span class="highlight">Bouquet</span></h2>
+                <p>Dapatkan buket impianmu dalam 4 langkah mudah.</p>
+            </div>
+
+            <div class="steps-grid">
+                
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Pilih Desain</h3>
+                    <p>Cek katalog kami di website atau Instagram. Pilih model, jenis bunga, dan ukuran yang kamu suka.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </div>
+                    <h3>Isi Form Order</h3>
+                    <p>Hubungi admin dan isi detail pesanan: Warna kertas (wrapping), isi kartu ucapan, dan tanggal pengiriman.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <h3>Pembayaran</h3>
+                    <p>Lakukan pembayaran penuh atau DP (Down Payment) via Transfer Bank atau E-Wallet untuk memproses pesanan.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="icon-box">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <h3>Pengiriman</h3>
+                    <p>Duduk manis! Kurir kami akan mengantar buket cantikmu dengan aman ke lokasi tujuan.</p>
+                </div>
+
+            </div>
+
+            <div class="order-cta">
+                <a href="https://wa.me/6289521001497?text=Halo%20kak%2C%20saya%20tertarik%20mau%20pesan%20buketnya" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+   <section class="contact-section" id="contact">
+    <div class="container-contact-wrapper">
+        
+        <div class="contact-top-grid">
+            
+            <div class="contact-info">
+                <span class="sub-title">GET IN TOUCH</span>
+                <h2>Visit Our Studio</h2>
+                <p class="desc">Datang langsung ke tempat kami untuk konsultasi buket pernikahan atau hadiah spesialmu.</p>
+
+                <div class="info-items">
+                    <div class="info-box">
+                        <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Jl. Cicantel, Mulyasari, Kec Tamansari, Kota Tasikmalaya</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+62 895-2100-1497</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="icon-circle"><i class="fa-regular fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sindifauziah05@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.271342!2d108.2323!3d-7.3567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjEnMjQuMSJTIDEwOMKwMTMnNTYuMyJF!5e0!3m2!1sid!2sid!4v1620000000000" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Payment -->
+            <div class="payment-methods">
+                <span class="sub-title">PAYMENT OPTIONS</span>
+                <h2>Payment Method</h2>
+                <p class="desc">Kami menerima pembayaran melalui transfer Bank dan E-Wallet berikut:</p>
+
+                <div class="payment-grid">
+                    <div class="pay-card">
+                        <div class="pay-header">
+                            <i class="fa-solid fa-university" style="color: #003899;"></i>
+                            <span><b>BCA</b></span>
+                        </div>
+                        <p><b>0541822975</b><br><small>a/n Sindi Fauziah</small></p>
+                    </div>
+
+                <div class="pay-card">
+                    <div class="pay-header">
+                        <i class="fa-solid fa-university" style="color: #ff6600;"></i>
+                        <span><b>BNI</b></span>
+                    </div>
+                    <p><b>1799341727</b><br><small>a/n Sindi Fauziah</small></p>
+                </div>
+
+                <div class="pay-card">
+                    <div class="pay-header">
+                        <i class="fa-solid fa-building-columns" style="color: #ff5722;"></i>
+                        <span><b>SeaBank</b></span>
+                    </div>
+                    <p><b>901544372540</b><br><small>a/n Mustahiroh</small></p>
+                </div>
+
+                <div class="pay-card">
+                    <div class="pay-header">
+                        <i class="fa-solid fa-wallet" style="color: #118ee1;"></i>
+                        <span><b>DANA / ShopeePay</b></span>
+                    </div>
+                    <p><b>089521001497</b><br><small>a/n Sindi Fauziah</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Form Pembelian -->
+    <section>
+        <div class="contact-bottom-form">
+        <div class="contact-form-wrapper">
+            <form class="contact-form" name="submit-to-google-sheet">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h3>Send a Message</h3>
+                    <p>Punya pertanyaan khusus? Kirim pesan langsung ke tim kami.</p>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Contoh: Budi Santoso" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nomor WhatsApp</label>
+                        <input type="tel" id="nomor" name="nomor" placeholder="0812..." required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Pesan / Request</label>
+                    <textarea id="pesan" name="pesan" rows="4" placeholder="Halo, saya ingin bertanya tentang..." required></textarea>
+                </div>
+
+                <button class="btn-loading" type="button" style="display: none;" disabled>
+                    <i class="fa fa-spinner fa-spin"></i> Mengirim...
+                </button>
+
+                <button type="submit" class="btn-send">
+                    Kirim Pesan via WhatsApp <i class="fa-brands fa-whatsapp"></i>
+                </button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <div id="testiModal" class="testi-modal" onclick="closeModal()" style="display: none;">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
+        
+    <section class="testi-section" id="testi">
+        <div class="container-order">
+            <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+                <span class="sub-title">OUR REVIEWS</span>
+                <h2>Happy <span class="highlight">Customers</span></h2>
+                <p>Geser ke samping untuk melihat testimoni pelanggan kami</p>
+            </div>
+        <div class="testi-slider">
+            <div class="testi-card" onclick="openModal('Testimoni/1.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/1.jpeg" alt="Testi 1">
+                </div>
+            </div>
+            
+            <div class="testi-card" onclick="openModal('Testimoni/2.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/2.jpeg" alt="Testi 2">
+                </div>
+            </div>
+
+            <div class="testi-card" onclick="openModal('Testimoni/3.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/3.jpeg" alt="Testi 3">
+                </div>
+            </div>
+
+                    <div class="testi-card" onclick="openModal('Testimoni/4.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/4.jpeg" alt="Testi 4">
+                </div>
+            </div>
+            
+            <div class="testi-card" onclick="openModal('Testimoni/5.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/5.jpeg" alt="Testi 5">
+                </div>
+            </div>
+
+            <div class="testi-card" onclick="openModal('Testimoni/6.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/6.jpeg" alt="Testi 6">
+                </div>
+            </div>
+
+            <div class="testi-card" onclick="openModal('Testimoni/7.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/7.jpeg" alt="Testi 7">
+                </div>
+            </div>
+
+            <div class="testi-card" onclick="openModal('Testimoni/8.jpeg')">
+                <div class="img-container">
+                    <img src="Gambar/Testimoni/8.jpeg" alt="Testi 8">
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bouquet Bysindi. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript untuk menghubungkan ke spreadsheet -->
+    <script>
+        // Cek Status Login saat Halaman Dimuat
+        window.onload = function() {
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+            const userName = sessionStorage.getItem('userName');
+
+            const guestNav = document.getElementById('guest-nav');
+            const userNav = document.getElementById('user-nav');
+            const nameDisplay = document.getElementById('userNameDisplay');
+            const avatarDisplay = document.getElementById('userAvatar');
+
+            if (isLoggedIn === 'true' && userName) {
+                // Jika SUDAH login
+                guestNav.style.display = 'none'; 
+                userNav.style.display = 'flex';  
+                
+                nameDisplay.innerText = userName;
+                // inisial foto profil otomatis
+                avatarDisplay.src = `https://ui-avatars.com/api/?name=${userName}&background=D61C4E&color=fff&rounded=true`;
+            } else {
+                // Jika BELUM login
+                guestNav.style.display = 'flex';
+                userNav.style.display = 'none';
+            }
+        };
+
+        function logout() {
+            if(confirm("Yakin ingin keluar?")) {
+                sessionStorage.clear(); // Hapus data login
+                window.location.reload(); // Refresh halaman
+            }
+        }
+
+        function openModal(imgSrc) {
+        const modal = document.getElementById("testiModal");
+        const modalImg = document.getElementById("imgFull");
+        
+        modal.style.display = "flex"; 
+        modalImg.src = imgSrc;
+        
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("testiModal");
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+        // WEB APP URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwm9ovd3tl-kIgNU92m0RIzMFH40uZlFl1wWNdwTftdAVbWBT1cCA-_wlZUgRTONIVX/exec';
+        
+        const form = document.forms['submit-to-google-sheet'];
+        const btnKirim = document.querySelector('.btn-send');
+        const btnLoading = document.querySelector('.btn-loading');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // 1. Tampilkan loading
+            btnLoading.style.display = "block";
+            btnKirim.style.display = "none";
+
+            // 2. Kirim data ke Google Spreadsheet
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    // 3. Jika sukses tersimpan, lanjut kirim ke WhatsApp
+                    kirimKeWhatsApp();
+                    
+                    // Reset tombol dan form
+                    btnLoading.style.display = "none";
+                    btnKirim.style.display = "block";
+                    form.reset();
+                    console.log('Success!', response);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    // Jika error spreadsheet, tetap coba buka WA agar user tidak kecewa
+                    kirimKeWhatsApp(); 
+                    btnLoading.style.display = "none";
+                    btnKirim.style.display = "block";
+                });
+        });
+
+        function kirimKeWhatsApp() {
+            var nama = document.getElementById("nama").value;
+            var pesan = document.getElementById("pesan").value;
+            
+            var nomorAdmin = "6289521001497"; 
+            
+            var textUrl = "Halo Admin, perkenalkan saya *" + nama + "*.%0A%0A" + pesan;
+            
+            window.open("https://api.whatsapp.com/send?phone=" + nomorAdmin + "&text=" + textUrl, "_blank");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

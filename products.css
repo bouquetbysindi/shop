@@ -1,0 +1,321 @@
+        /* --- NAVBAR --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .logo i { 
+            color: #D61C4E;
+        }
+
+        .nav-back {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover { 
+            color: #D61C4E; 
+        }
+
+        /* --- HEADER HALAMAN --- */
+        .page-header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: white;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .page-header p { 
+            color: #777; 
+        }
+
+        /* --- FILTER BUTTONS --- */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .filter-btn {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #555;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #D61C4E;
+            color: white;
+            border-color: #D61C4E;
+        }
+
+        /* --- PRODUCT GRID --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); 
+            gap: 30px;
+        }
+
+        /* --- KARTU PRODUK --- */
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Gambar Produk */
+        .card-image {
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .card-image img {
+            transform: scale(1.1); 
+        }
+
+        /* (New/Best Seller) */
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #D61C4E;
+            color: white;
+            padding: 5px 12px;
+            font-size: 11px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        /* Info Produk */
+        .card-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .category-tag {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .card-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #D61C4E;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Tombol di Card */
+        .btn-card {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 1px solid #333;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 12px;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        .btn-card:hover {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .page-header h1 { font-size: 2rem; }
+            .filter-container { gap: 8px; }
+            .filter-btn { font-size: 12px; padding: 8px 15px; }
+        }
+
+           /* --- RESET & GLOBAL STYLE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+        }
+
+        /* --- CONTAINER UTAMA --- */
+        .catalog-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        /* Header Judul */
+        .catalog-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .catalog-header p {
+            color: #777;
+            margin-bottom: 50px;
+        }
+
+        /* --- GRID LAYOUT (3x3) --- */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 25px; 
+        }
+
+        /* --- KARTU KATEGORI --- */
+        .cat-card {
+            position: relative;
+            height: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px); 
+        }
+
+        /* Gambar Background */
+        .cat-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .cat-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Overlay Gelap (Agar tulisan terbaca) */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            text-align: left;
+        }
+
+        /* Teks Judul Kategori */
+        .cat-title {
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Subteks / Range Harga */
+        .cat-subtitle {
+            color: #ddd;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Badge/Label Kecil di Pojok Atas */
+        .badge-cat {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #D61C4E; 
+            color: white;
+            padding: 5px 12px;
+            font-size: 11px;
+            border-radius: 20px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        /* --- RESPONSIVE (HP & Tablet) --- */
+        @media (max-width: 900px) {
+            .catalog-grid {
+                grid-template-columns: repeat(3, 1fr); 
+            }
+        }
+
+        @media (max-width: 600px) {
+            .catalog-grid {
+                grid-template-columns: 1fr; 
+            }
+            .cat-card {
+                height: 200px; 
+            }
+        }
